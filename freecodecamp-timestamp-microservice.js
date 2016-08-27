@@ -11,14 +11,25 @@
   var express = require('express')
   var moment = require('moment')
   var chrono = require('chrono-node')
+  var pug = require('pug')
   var pkg = require('./package')
 
   var PORT = process.env.PORT || 8080
   var app = express()
 
+  app.set('view engine', 'pug')
+
   // redirect to homepage
   app.get('/', function (request, response) {
-    response.redirect(pkg.homepage)
+    var locals = {
+      title: pkg.name,
+      version: pkg.version,
+      homepage: pkg.homepage,
+      hostname: request.hostname,
+      today: moment().format('YYYY-MM-DD')
+    }
+
+    response.render('index', locals)
   })
 
   // handle dates and timestamps
