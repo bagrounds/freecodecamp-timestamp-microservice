@@ -1,0 +1,29 @@
+{
+  "name": "freecodecamp-timestamp-microservice",
+  "version": "0.1.0",
+  "description": "https://www.freecodecamp.com/challenges/timestamp-microservice",
+  "main": "freecodecamp-timestamp-microservice.js",
+  "scripts": {
+    "start": "node freecodecamp-timestamp-microservice.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagrounds/freecodecamp-timestamp-microservice.git"
+  },
+  "keywords": [
+    "freecodecamp",
+    "timestamp",
+    "microservice"
+  ],
+  "author": "bagrounds@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bagrounds/freecodecamp-timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/bagrounds/freecodecamp-timestamp-microservice#readme",
+  "dependencies": {
+    "chrono-node": "^1.2.4",
+    "express": "^4.14.0",
+    "moment": "^2.14.1"
+  }
+}
